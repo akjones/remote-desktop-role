@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Andrew Jones
+  description: Install and configure XFCE4 + XRDP for remote desktop funtimes.
+  company: Ac
+  license: GPLV3
+  min_ansible_version: 1.9
+  platforms:
+  - name: Ubuntu
+    versions:
+      - all
+  galaxy_tags:
+    - remote-dektop
+    - ubuntu
+    - xfce4
