@@ -18,27 +18,31 @@
     group: ubuntu
 
 - name: global xsession file
+  become: yes
   copy:
     src: xsession
     dest: /etc/skel/.xsession
 
 - name: restart xrdp service
+  become: yes
   service:
     name: xrdp
     enabled: yes
     state: restarted
 
 - name: upload xrdp.ini
+  become: yes
   copy:
     src: xrdp.ini
     dest: /etc/xrdp/xrdp.ini
 
-- name: upload xrdp.ini
+- name: upload sshd_config
   copy:
     src: sshd_config
     dest: /etc/ssh/sshd_config
 
 - name: restart ssh service
+  become: yes
   service:
     name: ssh
     enabled: yes
