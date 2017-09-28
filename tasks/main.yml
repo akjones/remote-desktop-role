@@ -37,6 +37,7 @@
     dest: /etc/xrdp/xrdp.ini
 
 - name: upload sshd_config
+  become: yes
   copy:
     src: sshd_config
     dest: /etc/ssh/sshd_config
@@ -49,6 +50,7 @@
     state: restarted
 
 - name: setup password for default user
+  become: yes
   user:
     name: ubuntu
     password: "{{ ubuntu_password }}"
