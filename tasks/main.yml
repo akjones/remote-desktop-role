@@ -58,7 +58,7 @@
 
 - name: fix tab completion
   lineinfile:
-    path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+    path: /home/ubuntu/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
     regexp: '<property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>'
     line: '<property name="&lt;Super&gt;Tab" type="empty"/>'
 
